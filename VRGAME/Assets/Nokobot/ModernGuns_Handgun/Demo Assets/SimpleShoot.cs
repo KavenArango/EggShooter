@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+
 
 public class SimpleShoot : MonoBehaviour
 {
@@ -22,24 +24,27 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            //if (SteamVR_Actions._default.InteractUI.GetStateUp(SteamVR_Input_Sources.RightHand))
+            //{
+            Debug.Log("fire");
             GetComponent<Animator>().SetTrigger("Fire");
         }
     }
 
     void Shoot()
     {
-        //  GameObject bullet;
-        //  bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
-        // bullet.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+         GameObject bullet;
+         bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+         bullet.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
 
         GameObject tempFlash;
        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
        tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
 
-       // Destroy(tempFlash, 0.5f);
-        //  Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
+        Destroy(tempFlash, 0.5f);
+         Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
        
     }
 
