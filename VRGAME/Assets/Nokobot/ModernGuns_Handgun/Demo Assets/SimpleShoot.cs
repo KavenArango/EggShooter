@@ -23,9 +23,7 @@ public class SimpleShoot : MonoBehaviour
 
     void Update()
     {
-
-        SteamVR_Input_Sources sources = interactable.attachedToHand.handType;
-        if (fireAction[sources].stateDown)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
             CasingRelease();
