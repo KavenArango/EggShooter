@@ -2282,17 +2282,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireAction:
-    actionPath: /actions/default/in/InteractUI
+    actionPath: 
     needsReinit: 0
-  bulletPrefab: {fileID: 1900734910723676, guid: 67c3c990b6c48af469e31db314977502,
-    type: 3}
-  casingPrefab: {fileID: 1482960508195586, guid: 91dcfdffdc6d38e47916b9c549e26dac,
-    type: 3}
-  muzzleFlashPrefab: {fileID: 1782395880954752, guid: e802c9c5b472d2345a808aca4bc81014,
-    type: 3}
-  barrelLocation: {fileID: 1444905471}
-  casingExitLocation: {fileID: 436557122}
-  shotPower: 750
+  bulletPrefab: {fileID: 0}
+  casingPrefab: {fileID: 0}
+  muzzleFlashPrefab: {fileID: 0}
+  barrelLocation: {fileID: 0}
+  casingExitLocation: {fileID: 0}
+  shotPower: 100
 --- !u!95 &1000279412
 Animator:
   serializedVersion: 3
@@ -2836,7 +2833,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16592
+  m_Name: pb_Mesh-1220
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3824,15 +3821,12 @@ MonoBehaviour:
   fireAction:
     actionPath: /actions/default/in/InteractUI
     needsReinit: 0
-  bulletPrefab: {fileID: 1900734910723676, guid: 67c3c990b6c48af469e31db314977502,
-    type: 3}
-  casingPrefab: {fileID: 1482960508195586, guid: 91dcfdffdc6d38e47916b9c549e26dac,
-    type: 3}
-  muzzleFlashPrefab: {fileID: 1782395880954752, guid: e802c9c5b472d2345a808aca4bc81014,
-    type: 3}
-  barrelLocation: {fileID: 1233379321}
-  casingExitLocation: {fileID: 624793977}
-  shotPower: 750
+  bulletPrefab: {fileID: 0}
+  casingPrefab: {fileID: 0}
+  muzzleFlashPrefab: {fileID: 0}
+  barrelLocation: {fileID: 0}
+  casingExitLocation: {fileID: 0}
+  shotPower: 100
 --- !u!95 &1732642992
 Animator:
   serializedVersion: 3
