@@ -1009,12 +1009,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2024888704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6be84e4d7829855419c06b94e56bd135, type: 3}
+  m_Script: {fileID: 11500000, guid: 04a4f36ca55623d4891e0e53b857285c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireAction:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 0
   bulletPrefab: {fileID: 1900734910723676, guid: 67c3c990b6c48af469e31db314977502,
     type: 3}
   casingPrefab: {fileID: 1482960508195586, guid: 91dcfdffdc6d38e47916b9c549e26dac,
@@ -1022,8 +1019,8 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 1782395880954752, guid: e802c9c5b472d2345a808aca4bc81014,
     type: 3}
   barrelLocation: {fileID: 1444763}
-  casingExitLocation: {fileID: 716801441}
-  shotPower: 750
+  casingExitLocation: {fileID: 304260476}
+  shotPower: 100
 --- !u!95 &2024888707
 Animator:
   serializedVersion: 3
@@ -1152,9 +1149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be84e4d7829855419c06b94e56bd135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireAction:
-    actionPath: /actions/default/in/InteractUI
-    needsReinit: 0
   bulletPrefab: {fileID: 1900734910723676, guid: 67c3c990b6c48af469e31db314977502,
     type: 3}
   casingPrefab: {fileID: 1482960508195586, guid: 91dcfdffdc6d38e47916b9c549e26dac,
@@ -1162,8 +1156,8 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 1782395880954752, guid: e802c9c5b472d2345a808aca4bc81014,
     type: 3}
   barrelLocation: {fileID: 3111071394651251144}
-  casingExitLocation: {fileID: 3112815900049782180}
-  shotPower: 750
+  casingExitLocation: {fileID: 304260476}
+  shotPower: 100
 --- !u!1 &3107563383611291446
 GameObject:
   m_ObjectHideFlags: 0
