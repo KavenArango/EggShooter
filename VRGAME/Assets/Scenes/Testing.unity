@@ -683,14 +683,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3109461681662638024}
-  m_LocalRotation: {x: 0.3093677, y: -0, z: -0, w: 0.9509425}
-  m_LocalPosition: {x: -0.0119999945, y: 0.00959003, z: -0.1362234}
+  m_LocalRotation: {x: 0.33142406, y: -0, z: -0, w: 0.9434819}
+  m_LocalPosition: {x: -0.0119999945, y: 0.012962699, z: -0.13558888}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 3112569577893079146}
   m_Father: {fileID: 7856878317980869758}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 36.042, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 38.710003, y: 0, z: 0}
 --- !u!4 &3112569577893079146
 Transform:
   m_ObjectHideFlags: 0
@@ -1949,8 +1949,7 @@ MonoBehaviour:
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  renderModelPrefab: {fileID: 1000012617731570, guid: 837f93beb9a614743ae3a2c0ada7c388,
-    type: 3}
+  renderModelPrefab: {fileID: 0}
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
