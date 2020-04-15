@@ -4,7 +4,7 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class SimpleShoot : MonoBehaviour
+public class shootleft : MonoBehaviour
 {
     public int maxAmmo = 10;
     private int currentAmmo;
@@ -38,7 +38,7 @@ public class SimpleShoot : MonoBehaviour
 
 
 
-        if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand))
+        if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.LeftHand))
         {
             if (currentAmmo > 0)
             {
@@ -73,7 +73,7 @@ public class SimpleShoot : MonoBehaviour
 
         Destroy(tempFlash, 0.5f);
         //Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
-       
+
     }
 
     void CasingRelease()
