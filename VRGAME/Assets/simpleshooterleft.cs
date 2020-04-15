@@ -4,62 +4,31 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class SimpleShoot : MonoBehaviour
+public class SimpleShooterLeft : MonoBehaviour
 {
-    public int maxAmmo = 10;
-    private int currentAmmo;
-
-
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
     public Transform barrelLocation;
     public Transform casingExitLocation;
-    public SteamVR_Action_Boolean trigger;
+
 
     public float shotPower = 100f;
 
     void Start()
     {
-        trigger = SteamVR_Actions._default.GrabPinch;
-
-        currentAmmo = maxAmmo;
         if (barrelLocation == null)
             barrelLocation = transform;
     }
 
     void Update()
     {
-        if (Vector3.Angle(transform.up, Vector3.up) > 100 && currentAmmo < maxAmmo)
-        {
-            Reload();
-        }
-
-
-
-
-        if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand))
-        {
-            if (currentAmmo > 0)
-            {
-                --currentAmmo;
-                Shoot();
-                CasingRelease();
-            }
-            else
-            {
-                //source.PlayOnShot(noammo); //please reload noammo
-            }
-
-        }
+       // if ()
+       // {
+            Shoot();
+            CasingRelease();
+       // }
     }
-
-    void Reload()
-    {
-        currentAmmo = maxAmmo;
-        //source.PlayOnShot(reload); //please reload sound
-    }
-
 
     void Shoot()
     {
@@ -73,7 +42,7 @@ public class SimpleShoot : MonoBehaviour
 
         Destroy(tempFlash, 0.5f);
         //Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
-       
+
     }
 
     void CasingRelease()
@@ -83,6 +52,4 @@ public class SimpleShoot : MonoBehaviour
         casing.GetComponent<Rigidbody>().AddExplosionForce(550f, (casingExitLocation.position - casingExitLocation.right * 0.3f - casingExitLocation.up * 0.6f), 1f);
         casing.GetComponent<Rigidbody>().AddTorque(new Vector3(0, Random.Range(100f, 500f), Random.Range(10f, 1000f)), ForceMode.Impulse);
     }
-
-
 }

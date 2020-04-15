@@ -21,7 +21,7 @@ public class simpleAttach : MonoBehaviour
 
     private void OnHandHoverBegin(Hand hand)
     {
-        hand.ShowGrabHint();
+        //hand.ShowGrabHint();
     }
 
 
