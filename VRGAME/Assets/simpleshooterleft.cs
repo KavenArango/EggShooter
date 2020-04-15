@@ -4,26 +4,29 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class SimpleShoot : MonoBehaviour
+public class simpleshootleft : MonoBehaviour
 {
+    public SteamVR_Action_Boolean fireAction;
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
     public Transform barrelLocation;
     public Transform casingExitLocation;
+    private Interactable interactable;
 
 
     public float shotPower = 100f;
 
     void Start()
     {
+        interactable = GetComponent<Interactable>();
         if (barrelLocation == null)
             barrelLocation = transform;
     }
 
     void Update()
     {
-        if (SteamVR_Actions._default.InteractUI.GetStateUp(SteamVR_Input_Sources.RightHand))
+        if (SteamVR_Actions._default.InteractUI.GetStateUp(SteamVR_Input_Sources.LeftHand))
         {
             Shoot();
             CasingRelease();
@@ -42,7 +45,7 @@ public class SimpleShoot : MonoBehaviour
 
         Destroy(tempFlash, 0.5f);
         //Instantiate(casingPrefab, casingExitLocation.position, casingExitLocation.rotation).GetComponent<Rigidbody>().AddForce(casingExitLocation.right * 100f);
-       
+
     }
 
     void CasingRelease()
