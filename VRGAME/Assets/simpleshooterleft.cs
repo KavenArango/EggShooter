@@ -23,11 +23,11 @@ public class SimpleShooterLeft : MonoBehaviour
 
     void Update()
     {
-        if (SteamVR_Input_Sources.LeftHand)
-        {
+       // if ()
+       // {
             Shoot();
             CasingRelease();
-        }
+       // }
     }
 
     void Shoot()

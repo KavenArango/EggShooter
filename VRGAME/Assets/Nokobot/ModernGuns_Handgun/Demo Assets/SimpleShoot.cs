@@ -6,29 +6,60 @@ using Valve.VR.InteractionSystem;
 
 public class SimpleShoot : MonoBehaviour
 {
+    public int maxAmmo = 10;
+    private int currentAmmo;
+
+
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
     public Transform barrelLocation;
     public Transform casingExitLocation;
-
+    public SteamVR_Action_Boolean trigger;
 
     public float shotPower = 100f;
 
     void Start()
     {
+        trigger = SteamVR_Actions._default.GrabPinch;
+
+        currentAmmo = maxAmmo;
         if (barrelLocation == null)
             barrelLocation = transform;
     }
 
     void Update()
     {
-        if (SteamVR_Actions._default.InteractUI.GetStateUp(SteamVR_Input_Sources.RightHand))
+        if (Vector3.Angle(transform.up, Vector3.up) > 100 && currentAmmo < maxAmmo)
         {
-            Shoot();
-            CasingRelease();
+            Reload();
+        }
+
+
+
+
+        if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.LeftHand))
+        {
+            if (currentAmmo > 0)
+            {
+                --currentAmmo;
+                Shoot();
+                CasingRelease();
+            }
+            else
+            {
+                //source.PlayOnShot(noammo); //please reload noammo
+            }
+
         }
     }
+
+    void Reload()
+    {
+        currentAmmo = maxAmmo;
+        //source.PlayOnShot(reload); //please reload sound
+    }
+
 
     void Shoot()
     {
