@@ -6,7 +6,7 @@ using UnityEngine;
 public class ApplyDamage : MonoBehaviour
 {
     // Start is called before the first frame update
-    float LifeDecay = 5.0f;
+    public float LifeDecay = 5.0f;
 
     private void OnCollisionEnter(Collision collision)
     {

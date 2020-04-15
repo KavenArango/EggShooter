@@ -12,18 +12,22 @@ public class SimpleShoot : MonoBehaviour
     public GameObject muzzleFlashPrefab;
     public Transform barrelLocation;
     public Transform casingExitLocation;
+    private Interactable interactable;
+
 
     public float shotPower = 100f;
 
     void Start()
     {
+        interactable = GetComponent<Interactable>();
         if (barrelLocation == null)
             barrelLocation = transform;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        SteamVR_Input_Sources source = interactable.attachedToHand.handType;
+        if (Input.GetKeyDown(KeyCode.Space) || fireAction[source].stateDown)
         {
             Shoot();
             CasingRelease();
