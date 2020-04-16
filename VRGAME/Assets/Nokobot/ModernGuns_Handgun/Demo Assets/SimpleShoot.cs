@@ -18,17 +18,19 @@ public class SimpleShoot : MonoBehaviour
     public Transform barrelLocation;
     public Transform casingExitLocation;
     public SteamVR_Action_Boolean trigger;
-    public float shotPower = 100f;
+    public float shotPower = 100f; 
     public TextMeshPro text;
-    public AudioClip fire;
-    public AudioClip reload;
-    public AudioClip noammo;
+    public AudioSource fire;
+    public AudioSource noammo;
+    public AudioSource reload;
+   
 
     void Start()
     {
         trigger = SteamVR_Actions._default.GrabPinch;
         
         text = transform.GetChild(0).GetChild(7).GetComponent<TextMeshPro>();
+
         currentAmmo = maxAmmo;
         if (barrelLocation == null)
             barrelLocation = transform;
@@ -52,10 +54,11 @@ public class SimpleShoot : MonoBehaviour
                 --currentAmmo;
                 Shoot();
                 CasingRelease();
+                fire.Play();
             }
             else
             {
-                //source.PlayOnShot(noammo); //please reload noammo
+                noammo.Play();
             }
            
         }
@@ -65,7 +68,7 @@ public class SimpleShoot : MonoBehaviour
     void Reload()
     {
         currentAmmo = maxAmmo;
-        //source.PlayOnShot(reload); //please reload sound
+        reload.Play();
     }
 
 

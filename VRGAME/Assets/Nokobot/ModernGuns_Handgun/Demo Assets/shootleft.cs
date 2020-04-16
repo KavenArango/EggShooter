@@ -18,7 +18,9 @@ public class shootleft : MonoBehaviour
     public Transform casingExitLocation;
     public SteamVR_Action_Boolean trigger;
     public TextMeshPro LeftText;
-
+    public AudioSource fire;
+    public AudioSource noammo;
+    public AudioSource reload;
     public float shotPower = 100f;
 
     void Start()
@@ -47,10 +49,11 @@ public class shootleft : MonoBehaviour
                 --currentAmmo;
                 Shoot();
                 CasingRelease();
+                fire.Play();
             }
             else
             {
-                //source.PlayOnShot(noammo); //please reload noammo
+                noammo.Play();
             }
 
         }
@@ -60,7 +63,7 @@ public class shootleft : MonoBehaviour
     void Reload()
     {
         currentAmmo = maxAmmo;
-        //source.PlayOnShot(reload); //please reload sound
+        reload.Play();
     }
 
 
