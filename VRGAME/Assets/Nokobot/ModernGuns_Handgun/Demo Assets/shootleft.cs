@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
+using TMPro;
 
 public class shootleft : MonoBehaviour
 {
@@ -16,13 +17,16 @@ public class shootleft : MonoBehaviour
     public Transform barrelLocation;
     public Transform casingExitLocation;
     public SteamVR_Action_Boolean trigger;
-
+    public TextMeshPro LeftText;
+    public AudioSource fire;
+    public AudioSource noammo;
+    public AudioSource reload;
     public float shotPower = 100f;
 
     void Start()
     {
         trigger = SteamVR_Actions._default.GrabPinch;
-
+        LeftText = FindObjectOfType<TextMeshPro>();
         currentAmmo = maxAmmo;
         if (barrelLocation == null)
             barrelLocation = transform;
@@ -45,19 +49,21 @@ public class shootleft : MonoBehaviour
                 --currentAmmo;
                 Shoot();
                 CasingRelease();
+                fire.Play();
             }
             else
             {
-                //source.PlayOnShot(noammo); //please reload noammo
+                noammo.Play();
             }
 
         }
+        LeftText.text = currentAmmo.ToString();
     }
 
     void Reload()
     {
         currentAmmo = maxAmmo;
-        //source.PlayOnShot(reload); //please reload sound
+        reload.Play();
     }
 
 
