@@ -52,15 +52,15 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void Update()
 		{
-			if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
-			{
-				if ( burstOnLifetimeEnd )
-				{
-					SpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );
-				}
+			//if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
+			//{
+			//	if ( burstOnLifetimeEnd )
+			//	{
+			//		SpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );
+			//	}
 
-				Destroy( gameObject );
-			}
+			//	Destroy( gameObject );
+			//}
 		}
 
 
@@ -118,6 +118,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void OnCollisionEnter( Collision collision )
 		{
+			Debug.Log("POP");
 			if ( bParticlesSpawned )
 			{
 				return;
