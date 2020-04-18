@@ -323,7 +323,22 @@ PrefabInstance:
         type: 3}
       propertyPath: fire
       value: 
-      objectReference: {fileID: 8300000, guid: 8269ce980237c2c4f97e62bf8bed7720, type: 3}
+      objectReference: {fileID: 22764265}
+    - target: {fileID: 1534233496077460414, guid: 9e350b32210781a45b74f7627e222d9e,
+        type: 3}
+      propertyPath: noammo
+      value: 
+      objectReference: {fileID: 81374574}
+    - target: {fileID: 1534233496077460414, guid: 9e350b32210781a45b74f7627e222d9e,
+        type: 3}
+      propertyPath: reload
+      value: 
+      objectReference: {fileID: 1649730459}
+    - target: {fileID: 1534233496077460414, guid: 9e350b32210781a45b74f7627e222d9e,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 771062905}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e350b32210781a45b74f7627e222d9e, type: 3}
 --- !u!54 &61888099
@@ -1944,7 +1959,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2278
+  m_Name: pb_Mesh-1234
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7849,7 +7864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a230aca4b7cef44b40f57f19065eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 2
 --- !u!1 &7856878317980430128
 GameObject:
   m_ObjectHideFlags: 0
@@ -9169,6 +9184,7 @@ GameObject:
   - component: {fileID: 8296172669343312275}
   - component: {fileID: 8296172669343312272}
   - component: {fileID: 8296172669343312273}
+  - component: {fileID: 8296172669343312274}
   m_Layer: 0
   m_Name: Ch36_nonPBR
   m_TagString: Untagged
@@ -9188,6 +9204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d05f4b6f641a704dbd06a498dc8eb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 7856878317980428638}
 --- !u!114 &8296172669343312273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9200,6 +9217,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace6fb32230b28941b08e2e7776d9245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8296172669343312274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172669343312271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39232079b6fae614d87863040487234f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1900734910723676, guid: 67c3c990b6c48af469e31db314977502,
+    type: 3}
+  casingPrefab: {fileID: 1482960508195586, guid: 91dcfdffdc6d38e47916b9c549e26dac,
+    type: 3}
+  muzzleFlashPrefab: {fileID: 1782395880954752, guid: e802c9c5b472d2345a808aca4bc81014,
+    type: 3}
+  barrelLocation: {fileID: 1499810392689427098}
+  casingExitLocation: {fileID: 1500189850547144412}
+  fire: {fileID: 22764265}
+  shotPower: 100
+  firerate: 1
 --- !u!136 &8296172669343312275
 CapsuleCollider:
   m_ObjectHideFlags: 0

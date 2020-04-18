@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class EnemyContr : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         setRigidbodyState(true);
         setColliderState(false);
         GetComponent<Animator>().enabled = true;
+    }
+    void Update()
+    {
+        transform.forward = Vector3.ProjectOnPlane((player.transform.position - transform.position), Vector3.up).normalized;
     }
 
     public void die()

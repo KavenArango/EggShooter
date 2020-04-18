@@ -20,7 +20,7 @@ public class hitdetect : MonoBehaviour
         Debug.Log("HIT");
         EnemyContr enemy = GetComponent<EnemyContr>();
         enemy.die();
-        Debug.Log("Hit");
+
 
     }
 }
