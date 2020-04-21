@@ -24,4 +24,10 @@ public class completeLevel : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+
+    public void SceneLoader(string scenename)
+    {
+        SceneManager.LoadScene(scenename);
+    }
 }
