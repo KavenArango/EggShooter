@@ -621,6 +621,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd02e6e9b9173e3419931f75c4e476a4, type: 3}
+--- !u!20 &182185101 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1407511404208213522, guid: 7928ec4edda984f48865e572975cfd0d,
+    type: 3}
+  m_PrefabInstance: {fileID: 199494411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &199494411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,8 +1363,8 @@ Canvas:
   m_GameObject: {fileID: 274191745}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 182185101}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -4020,7 +4026,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: -1.86
   m_Text: 'Score:'
 --- !u!222 &925245662
 CanvasRenderer:
