@@ -19,10 +19,6 @@ public class Move : MonoBehaviour
         {
             transform.position += Time.deltaTime * new Vector3(0, 0, speed );
         }
-        else
-        {
-            transform.position =  new Vector3(0, 0, 0);
-        }
     }
 
 
