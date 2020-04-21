@@ -26,7 +26,7 @@ public class EnemyDamage : MonoBehaviour
     {
         string x = Score.text;
 
-        Score.text = Convert.ToString(Convert.ToInt32(x)+100);
+        Score.text = Convert.ToString(Convert.ToInt32(x) + 100);
     }
 
 
