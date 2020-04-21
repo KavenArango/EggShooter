@@ -628,6 +628,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1305338339968596020, guid: 7928ec4edda984f48865e572975cfd0d,
+        type: 3}
+      propertyPath: deactivateOnDestroy
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1407511404209711149, guid: 7928ec4edda984f48865e572975cfd0d,
         type: 3}
       propertyPath: Score
@@ -1351,7 +1356,7 @@ RectTransform:
   - {fileID: 925245660}
   - {fileID: 1713593561}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
