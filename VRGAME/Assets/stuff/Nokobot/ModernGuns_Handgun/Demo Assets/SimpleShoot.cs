@@ -48,7 +48,7 @@ public class SimpleShoot : MonoBehaviour
 
 
         //if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand))
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand))
         {
             if (currentAmmo > 0)
             {

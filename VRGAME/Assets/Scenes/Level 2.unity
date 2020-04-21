@@ -708,6 +708,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6171699457247857636, guid: 7928ec4edda984f48865e572975cfd0d,
+        type: 3}
+      propertyPath: shotPower
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 9115638698670143485, guid: 7928ec4edda984f48865e572975cfd0d,
         type: 3}
       propertyPath: m_Mesh
@@ -732,6 +737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115638699673801566, guid: 7928ec4edda984f48865e572975cfd0d,
+        type: 3}
+      propertyPath: shotPower
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9115638700674318418, guid: 7928ec4edda984f48865e572975cfd0d,
         type: 3}
@@ -1351,7 +1361,7 @@ RectTransform:
   - {fileID: 925245660}
   - {fileID: 1713593561}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4911,6 +4921,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5ae5abad5938f4ba022b8c009d6dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1178161527
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178161525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8660254, y: 1.0000001, z: 0.098}
+  m_Center: {x: 0, y: 0.55, z: 0}
 --- !u!1001 &1203940717
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class EnemyShoot : MonoBehaviour
             fireCounter = 0.0f;
             Shoot();
             CasingRelease();
-            fire.Play();
+            //fire.Play();
         }        
         fireCounter += Time.deltaTime;
     }
