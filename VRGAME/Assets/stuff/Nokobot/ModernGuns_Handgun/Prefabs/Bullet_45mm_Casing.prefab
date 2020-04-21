@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23112035598563012}
   m_Layer: 0
   m_Name: Pistol_45mm_Case
-  m_TagString: Untagged
+  m_TagString: NoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 328092861272598468}
   m_Layer: 0
   m_Name: Bullet_45mm_Casing
-  m_TagString: Untagged
+  m_TagString: NoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -36,10 +36,9 @@ public class LaserInput : MonoBehaviour
                 if (currentObject.tag == "Button")
                 {
                     string name = currentObject.name;
-                    if (name == "Play")
+                    if (name == "Try1")
                     {
-                        Debug.Log("Play");
-                        SceneLoader("yes");
+                        SceneLoader("Level 1");
                     }
                     else
                     {
@@ -48,6 +47,13 @@ public class LaserInput : MonoBehaviour
                             Debug.Log("Exit");
 
                             Application.Quit();
+                        }
+                        else
+                        {
+                            if(name == "Western")
+                            {
+                                SceneLoader("Level 2");
+                            }
                         }
                     }
                 }
@@ -58,6 +64,6 @@ public class LaserInput : MonoBehaviour
 
     public void SceneLoader(string scenename)
     {
-        SceneManager.LoadScene("Testing");
+        SceneManager.LoadScene(scenename);
     }
 }

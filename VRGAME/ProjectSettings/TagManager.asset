@@ -7,6 +7,10 @@ TagManager:
   - projectile
   - FxTemporaire
   - Button
+  - player
+  - World
+  - NoDamage
+  - Fin
   layers:
   - Default
   - TransparentFX

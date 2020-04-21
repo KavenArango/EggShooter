@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4439223584580495824}
   m_Layer: 0
   m_Name: Trail
-  m_TagString: Untagged
+  m_TagString: NoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1073930550871833573}
   m_Layer: 0
   m_Name: Pistol_45mm_bullet
-  m_TagString: Untagged
+  m_TagString: NoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 2160275556444396595}
   m_Layer: 0
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: NoDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a9fbef11c1b4f4a9330acfe7d88007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeDecay: 5
+  LifeDecay: 2
 --- !u!96 &2160275556444396595
 TrailRenderer:
   serializedVersion: 2

@@ -17,10 +17,11 @@ public class hitdetect : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("HIT");
-        EnemyContr enemy = GetComponent<EnemyContr>();
-        enemy.die();
-
-
+     
+            if ((collision.gameObject.tag == "NoDamage"))
+            {
+                EnemyContr enemy = GetComponent<EnemyContr>();
+                enemy.die();
+           }
     }
 }
