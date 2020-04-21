@@ -12,8 +12,8 @@ public class EnemyShoot : MonoBehaviour
     public Transform casingExitLocation;
     public AudioSource fire;
     public float shotPower = 100f;
-    public float firerate = 1.0f;
-    private float fireCountdown = 0f;
+    public float firerate;
+    private float fireCounter = 0f;
     void Start()
     {
         if (barrelLocation == null)
@@ -22,32 +22,14 @@ public class EnemyShoot : MonoBehaviour
 
     void Update()
     {
-
-        //if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand))
-        //{
-        //    if (currentAmmo > 0)
-        //    {
-        //        --currentAmmo;
-        //        Shoot();
-        //        CasingRelease();
-        //        fire.Play();s
-        //    }
-        //    else
-        //    {
-        //        noammo.Play();
-        //    }
-
-        //}
-        if(fireCountdown <= 0f)
+        if(fireCounter > firerate)
         {
+            fireCounter = 0.0f;
             Shoot();
             CasingRelease();
             fire.Play();
-            fireCountdown = 1f / firerate;
-            Debug.Log("Fire");
-        }
-        fireCountdown -= Time.deltaTime;
-        
+        }        
+        fireCounter += Time.deltaTime;
     }
 
 

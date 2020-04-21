@@ -14,7 +14,7 @@ public class EnemyContr : MonoBehaviour
     }
     void Update()
     {
-        transform.forward = Vector3.ProjectOnPlane((player.transform.position - transform.position), Vector3.up).normalized;
+        transform.forward = Vector3.ProjectOnPlane(((player.transform.position) - transform.position), Vector3.up).normalized;
     }
 
     public void die()
