@@ -2955,7 +2955,7 @@ MonoBehaviour:
   casingExitLocation: {fileID: 4523779669690212221}
   fire: {fileID: 0}
   shotPower: 100
-  firerate: 1
+  firerate: 0.5
 --- !u!1 &6698037433378772168
 GameObject:
   m_ObjectHideFlags: 0
