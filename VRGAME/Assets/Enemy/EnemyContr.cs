@@ -10,7 +10,7 @@ public class EnemyContr : MonoBehaviour
     private bool Dead = false;
     public GameObject gun;
     public Text Score;
-    Collider m_Collider;
+    //Collider m_Collider;
 
 
 
@@ -22,7 +22,7 @@ public class EnemyContr : MonoBehaviour
         setColliderState(false);
         GetComponent<Animator>().enabled = true;
         GetComponent<EnemyShoot>().enabled = false;
-        m_Collider = GetComponent<Collider>();
+        //m_Collider = GetComponent<Collider>();
 
     }
 
@@ -57,7 +57,7 @@ public class EnemyContr : MonoBehaviour
         }
         else
         {
-            m_Collider.enabled = !m_Collider.enabled;
+            //m_Collider.enabled = !m_Collider.enabled;
             GetComponent<EnemyShoot>().enabled = false;
         }
     }
