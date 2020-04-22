@@ -36,7 +36,7 @@ public class LaserInput : MonoBehaviour
                 if (currentObject.tag == "Button")
                 {
                     string name = currentObject.name;
-                    if (name == "Try1")
+                    if (name == "Level1")
                     {
                         SceneLoader("Level 1");
                     }
@@ -50,7 +50,7 @@ public class LaserInput : MonoBehaviour
                         }
                         else
                         {
-                            if(name == "Western")
+                            if(name == "Level2")
                             {
                                 SceneLoader("Level 2");
                             }
