@@ -20,14 +20,4 @@ public class Move : MonoBehaviour
             transform.position += Time.deltaTime * new Vector3(0, 0, speed );
         }
     }
-
-
-    void OnCollisionEnter(Collider other)
-    {
-        //if player is on a gameObject with the tag "DeathZone", substract 1 health per frame 
-        if (other.gameObject.tag == "DeathZone")
-        {
-            Debug.Log("DONE");
-        }
-    }
 }
