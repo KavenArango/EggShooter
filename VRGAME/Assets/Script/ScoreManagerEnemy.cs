@@ -14,8 +14,8 @@ public class ScoreManagerEnemy : MonoBehaviour
 
     void Start()
     {
-        Level1Score.text = "Score: ";
-        Level2Score.text = "Score: ";
+        Level1Score.text = "Highscore: ";
+        Level2Score.text = "Highscore: ";
 
         Level1Score.text += PlayerPrefs.GetInt("Level1HighScore").ToString();
         Level2Score.text += PlayerPrefs.GetInt("Level2HighScore").ToString();
